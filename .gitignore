@@ -1,6 +1,7 @@
 # Project ignored directories
 input/
 output.jsonl
+questions_output.pdf
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
