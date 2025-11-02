@@ -44,13 +44,18 @@ for fname in sorted(html_files):
 
             # select choices
             choices = []
+            correct_choices = []
             question_choices = q_body.select('.multi-choice-item')
+
             for choice in question_choices:
+                if 'class' in choice.attrs and 'correct-hidden' in choice['class']:
+                    correct_choices.append(choice.select_one('span')['data-choice-letter'])
                 for unwanted in choice.select(".badge, .most-voted-answer-badge"):
                     unwanted.decompose()
                 choices.append(choice.get_text(separator=" ", strip=True))
 
             q['choices'] = choices
+            q['correct_choices'] = correct_choices
             questions.append(q)
 
         if is_new_file:
