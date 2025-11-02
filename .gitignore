@@ -3,6 +3,7 @@ input/
 output.jsonl
 questions_output.pdf
 answer.pdf
+questions_with_answers.epub
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
