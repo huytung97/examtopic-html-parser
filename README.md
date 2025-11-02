@@ -21,5 +21,12 @@ pip install -r requirements.txt
 ## How to run
 ### Parse HTML files
 ```bash
+# parse html to jsonline
 python parse_html.py
+
+# generate question pdf
+python generate_pdf.py
+
+# generate answer pdf
+python generate_answer.py
 ```
